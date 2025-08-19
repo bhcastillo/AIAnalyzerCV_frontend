@@ -1,0 +1,127 @@
+:root {
+  --color-primary: #00eb7d;
+  --color-secondary: #0c2d33;
+  --color-danger: #e71d36;
+  --color-warning: #ff9f1c;
+  --color-info: #2ec4b6;
+  --color-background: #0b1c2c;
+  --color-white: #e5e5e5;
+  --color-black: #2c2e30;
+  --color-grey-1: #94a3b8;
+  --color-grey-2: #b2b6ba;
+  --color-overlay: rgba(253, 255, 252, 0.8);
+  --background-color: #e5e5e5;
+  --background-inner-color: #ffffff;
+  --background-selected-color: #f1f8ff;
+  --border-selected-color: #3366ff;
+  --border-inner-color: #ffffff;
+  --font-weight: 400;
+  --border-color: #efefef;
+  --text-color: #333;
+  --handle-color: rgba(0, 0, 0, 0.25);
+  --box-shadow-border: 0 0 0 calc(1px / var(--scale-x, 1))
+    rgba(63, 63, 68, 0.05);
+  --box-shadow-common: 0 1px calc(3px / var(--scale-x, 1)) 0
+    rgba(34, 33, 81, 0.15);
+  --focused-outline-color: #4c9ffe;
+  --box-shadow: var(--box-shadow-border), var(--box-shadow-common);
+  --color-icon: #1890ff;
+  --color-label: #868b90;
+  --color-placeholder: #868b90;
+  --color-green: #52c41a;
+  --color-red: #d4380d;
+  --color-primary-hover: #00e686;
+  --color-primary-active: #00cc78;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+section,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+p,
+ul li {
+  margin: 0;
+  padding: 0;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+.ant-list-item {
+  padding: 5px 0 !important;
+}
+
+.app {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.analyze-button[disabled] {
+  background-color: var(--color-grey-1) !important;
+  color: var(--color-white) !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+.title {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+
+  span {
+    color: var(--color-white);
+  }
+}
+
+.custom-upload-button:hover {
+  color: #333 !important;
+  background-color: rgba(0, 235, 125, 0.8) !important;
+  cursor: pointer;
+}
+
+.transition-wrapper {
+  overflow: hidden;
+  opacity: 1;
+  height: auto;
+  max-height: 500px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.transition-wrapper.hide {
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+}
